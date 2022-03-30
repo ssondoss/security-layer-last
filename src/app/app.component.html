@@ -1,0 +1,31 @@
+<div class="m-5 bg-light rounded border">
+  <div class="row mx-0  border-bottom py-2">
+    <div class="col-3 ">backend Public key:</div>
+    <div class="col-9 ">
+      {{ backendPublicKey }}
+    </div>
+  </div>
+  <div class="row mx-0  border-bottom py-2">
+    <div class="col-3">Auth ID:</div>
+    <div class="col-9">
+      {{ authID }}
+    </div>
+  </div>
+  <div class="row mx-0  border-bottom py-2">
+    <div class="col-3">Session ID:</div>
+    <div class="col-9">
+      {{ sessionID }}
+    </div>
+  </div>
+
+
+<div class="row mx-0 p-3">
+<input type="text" #toBeEncrypted  class="form-control-lg form-control col-md-9"/>
+<div class="col-md-3">
+<button (click)="encrypt(toBeEncrypted.value)"  class="btn btn-primary w-100 btn-lg"  >encrypt</button>
+</div>
+</div>
+<!-- <div class=""  *ngIf="encryptedText">{{ encryptedText }}</div> -->
+<div class=" m-3  alert alert-info " *ngIf="decryptedRes" >{{ decryptedRes }}</div>
+
+</div>
